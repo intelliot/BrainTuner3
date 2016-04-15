@@ -73,6 +73,13 @@
 	bestTime.text = [NSString stringWithFormat:@"Best Time: %@", sBestTime];
 }
 
+
+- (IBAction)clickLink:(id)sender {
+	//NSLog(@"clickLink");
+	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.gengarstudios.com"]];
+}
+
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
 	// Return YES for supported orientations
 	return (interfaceOrientation == UIInterfaceOrientationPortrait);

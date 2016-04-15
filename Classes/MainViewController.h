@@ -11,10 +11,12 @@
 @interface MainViewController : UIViewController {
 	IBOutlet UISegmentedControl *segmentedControl;
 	IBOutlet UILabel *bestTime;
-	
+	//IBOutlet UILabel *myURL;
 }
 
 - (IBAction)setProblemCount:(UISegmentedControl *)sender;
 - (void)loadBestTime:(int)numProblems;
+
+- (IBAction)clickLink:(id)sender;
 
 @end

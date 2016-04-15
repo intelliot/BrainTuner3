@@ -1,0 +1,3 @@
+/Users/elliot/Desktop/BrainTuner3/Classes/FlipsideView.m:35: warning: incomplete implementation of class 'FlipsideView'
+/Users/elliot/Desktop/BrainTuner3/Classes/FlipsideView.m:35: warning: method definition for '-clickWrong:' not found
+/Users/elliot/Desktop/BrainTuner3/Classes/FlipsideView.m:35: warning: method definition for '-clickRight:' not found

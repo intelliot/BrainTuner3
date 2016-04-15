@@ -11,6 +11,8 @@
 #import "BrainTuner3AppDelegate.h"
 //#import "MyTableViewCell.h"
 
+#include <AudioToolbox/AudioToolbox.h>
+
 #define RANDOM_SEED() srandom(time(NULL))
 #define LABEL_TAG 1
 #define IMAGE_TAG 2
@@ -19,6 +21,7 @@
 @implementation FlipsideViewController
 
 @synthesize problemCount;
+@synthesize problemArray;
 
 - (void)viewDidLoad {
 	//self.view.backgroundColor = [UIColor viewFlipsideBackgroundColor];
@@ -26,6 +29,13 @@
 
 
 - (void)viewWillAppear:(BOOL)animated {
+	NSLog(@"viewWillAppear");
+	countdown.hidden = NO;
+	countdown.text = @"3";
+	
+	wrongButton.enabled = NO;
+	rightButton.enabled = NO;
+	
 	RANDOM_SEED();
 	
 	currentProblem = 0;
@@ -50,7 +60,9 @@
 	
 	//problemArray = [[NSArray alloc] init];
 	//[problemArray
-	NSLog(@"%@", problemArray);
+	
+	//NSLog(@"%@", problemArray);
+	
 	//currentProblem = 0;
 	//tableArray = [[NSArray arrayWithObjects:@"First", @"Second", @"Third", nil] retain];
 	
@@ -65,8 +77,43 @@
 						atScrollPosition:UITableViewScrollPositionMiddle
 								animated:YES];
 	
-	start = [[NSDate date] retain];
+	[self playSound:"TECHNOLOGY MULTIMEDIA MENU SCREEN BLIP 01"];
+	[NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(continueCountdown:) userInfo:nil repeats:YES];
 }
+
+
+- (void)playSound:(const char *)inFileName {
+	SystemSoundID mySSID; // maybe reuse this?
+	
+	CFStringRef fileName = CFStringCreateWithCString(kCFAllocatorDefault, inFileName, kCFStringEncodingUTF8);
+	CFStringRef fileType = CFStringCreateWithCString(kCFAllocatorDefault, "wav", kCFStringEncodingUTF8);
+	
+	CFBundleRef mainBundle = CFBundleGetMainBundle();
+	CFURLRef myURLRef = CFBundleCopyResourceURL(mainBundle, fileName, fileType, NULL);
+	
+	AudioServicesCreateSystemSoundID (myURLRef, &mySSID); // maybe delete this to save memory?
+	AudioServicesPlaySystemSound (mySSID);
+}
+
+
+- (void)continueCountdown:(NSTimer*)theTimer {
+	if ([countdown.text intValue] > 1) {
+		[self playSound:"TECHNOLOGY MULTIMEDIA MENU SCREEN BLIP 01"];
+		countdown.text = [NSString stringWithFormat:@"%d", [countdown.text intValue] - 1];
+	} else {
+		// countdown is done
+		[theTimer invalidate];
+		[self playSound:"beep5"];
+		
+		countdown.hidden = YES;
+		
+		wrongButton.enabled = YES;
+		rightButton.enabled = YES;
+		
+		start = [[NSDate date] retain];	
+	}
+}
+
 
 /*
 - (void)setProblemCount:(int)newCount {
@@ -228,7 +275,8 @@
 	}
 	int accuracy = (100 * correct) / problemCount;
 	int penalty = 5 * incorrect;
-	double finalTime = time + penalty;
+	//double
+	finalTime = time + penalty;
 	
 	
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -244,10 +292,16 @@
 	NSString *title;
 	NSString *message;
 	if (finalTime >= 2.5 * problemCount) {
-		title = [NSString stringWithString:@"Not Very Good"];
+		if (accuracy == 100)
+			title = [NSString stringWithString:@"Perfect But Slow"];
+		else
+			title = [NSString stringWithString:@"Not Very Good"];
 		message = [NSString stringWithString:@"Get your brain in-tune\nby trying again!"];
 	} else if (finalTime >= 2 * problemCount) {
-		title = [NSString stringWithString:@"Try Harder"];
+		if (accuracy == 100)
+			title = [NSString stringWithString:@"Try For More Speed"];
+		else
+			title = [NSString stringWithString:@"Try Harder"];
 		message = [NSString stringWithString:@"You'll get better with practice.\nTry again!"];
 	} else if (finalTime >= 1.5 * problemCount) {
 		title = [NSString stringWithString:@"Good Job"];
@@ -266,19 +320,29 @@
 	if (newRecord != nil) {
 		message = [NSString stringWithFormat:@"%@\n%@", newRecord, message];
 	}
+
+	//NSDictionary *scores = [NSDictionary dictionaryWithContentsOfURL:[NSURL URLWithString:@"http://gengarstudios.com/scores/submitscore.php"]];
+	//NSLog(@"scores is: %@", scores);
 	
 	// open an alert with just an OK button
 	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
 							message:[NSString stringWithFormat:@"%d%% Accuracy.\n%f sec. + %d penalty =\n%f seconds.\n%@", accuracy, time, penalty, finalTime, message]
-												   delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+												   delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Submit Score", nil];
 	[alert show];
 	[alert release];
+	
+	// Let's try submitting the score here
+
+	
 }
 
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-	[(RootViewController *)[(BrainTuner3AppDelegate *)[[UIApplication sharedApplication] delegate] rootViewController] toggleView];
-
+	if (buttonIndex == 0) {
+		[(RootViewController *)[(BrainTuner3AppDelegate *)[[UIApplication sharedApplication] delegate] rootViewController] toggleView];
+	} else {
+		[(RootViewController *)[(BrainTuner3AppDelegate *)[[UIApplication sharedApplication] delegate] rootViewController] showScoreView:finalTime];
+	}
 }
 
 
@@ -302,3 +366,4 @@
 
 
 @end
+

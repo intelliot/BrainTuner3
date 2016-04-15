@@ -9,6 +9,8 @@
 #import "BrainTuner3AppDelegate.h"
 #import "RootViewController.h"
 
+#import "ScoreViewController.h"
+
 @implementation BrainTuner3AppDelegate
 
 
@@ -22,6 +24,17 @@
 	[window makeKeyAndVisible];
 }
 
+/*
+- (void)applicationWillTerminate:(UIApplication *)application {
+	ScoreViewController *scoreViewController = [rootViewController scoreViewController];
+	if (scoreViewController != nil && [[scoreViewController view] superview] != nil) {
+		NSLog(@"Saving state");
+		
+		
+		NSLog(@"%@", [scoreViewController webView]); //[[[ request] URL] absoluteString]
+	}
+}
+*/
 
 - (void)dealloc {
 	[rootViewController release];

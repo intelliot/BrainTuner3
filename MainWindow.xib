@@ -47,7 +47,7 @@
 						<object class="IBUIButton" id="684817523">
 							<reference key="NSNextResponder" ref="282269593"/>
 							<int key="NSvFlags">292</int>
-							<string key="NSFrame">{{20, 175}, {280, 57}}</string>
+							<string key="NSFrame">{{20, 149}, {280, 57}}</string>
 							<reference key="NSSuperview" ref="282269593"/>
 							<bool key="IBUIOpaque">NO</bool>
 							<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -229,7 +229,7 @@
 					<string>BrainTuner3AppDelegate</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>RootViewController</string>
-					<string>{{419, 415}, {320, 480}}</string>
+					<string>{{416, 382}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				</object>
 			</object>
@@ -283,8 +283,17 @@
 					<string key="className">RootViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">toggleView</string>
-						<string key="NS.object.0">id</string>
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSMutableArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>showScoreView:</string>
+							<string>toggleView</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
+						</object>
 					</object>
 					<object class="NSMutableDictionary" key="outlets">
 						<string key="NS.key.0">startButton</string>

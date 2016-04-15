@@ -18,6 +18,14 @@
 		289233A70DB2D0840083E9F9 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 289233A50DB2D0840083E9F9 /* MainView.m */; };
 		289233AE0DB2D0DB0083E9F9 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 289233A90DB2D0DB0083E9F9 /* MainViewController.m */; };
 		289233AF0DB2D0DB0083E9F9 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 289233AB0DB2D0DB0083E9F9 /* RootViewController.m */; };
+		8B1BF0F20E466D870002E8F1 /* new icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B1BF0F00E466D870002E8F1 /* new icon.png */; };
+		8B1BF0F30E466D870002E8F1 /* brain guy.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B1BF0F10E466D870002E8F1 /* brain guy.png */; };
+		8B1BF0F60E466FC60002E8F1 /* brain guy speech.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B1BF0F50E466FC60002E8F1 /* brain guy speech.png */; };
+		8B1BF0F80E46705F0002E8F1 /* brain tuner title.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B1BF0F70E46705F0002E8F1 /* brain tuner title.png */; };
+		8B2D98230E527EF400BA7AEA /* LabelLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B2D98220E527EF400BA7AEA /* LabelLink.m */; };
+		8B2D987C0E52849600BA7AEA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B2D987B0E52849600BA7AEA /* Default.png */; };
+		8B2D98F90E52C8EE00BA7AEA /* tech_beep_8.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8B2D98F80E52C8EE00BA7AEA /* tech_beep_8.wav */; };
+		8B2D9A0E0E52E6EF00BA7AEA /* beep5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8B2D9A0D0E52E6EF00BA7AEA /* beep5.wav */; };
 		8B4CF1A50E3489EF006E4610 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B4CF1A40E3489EF006E4610 /* icon.png */; };
 		8B4CF1C90E37383E006E4610 /* TECHNOLOGY MULTIMEDIA MENU SCREEN BLIP 01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8B4CF1C80E37383E006E4610 /* TECHNOLOGY MULTIMEDIA MENU SCREEN BLIP 01.wav */; };
 		8B4CF20B0E374011006E4610 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4CF20A0E374011006E4610 /* AudioToolbox.framework */; };
@@ -29,6 +37,9 @@
 		8B8EE4230E2CC8150079EFC2 /* MrNote.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B8EE4210E2CC8150079EFC2 /* MrNote.png */; };
 		8BBF0E700E2DB9EB00A48FD7 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 289233AD0DB2D0DB0083E9F9 /* FlipsideViewController.m */; };
 		8BBF0F380E2DEA6300A48FD7 /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBF0F370E2DEA6300A48FD7 /* right.png */; };
+		8BE12B1D0E52211E00B5B026 /* ScoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BE12B1C0E52211E00B5B026 /* ScoreView.xib */; };
+		8BE12B740E5228A900B5B026 /* ScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE12B720E5228A900B5B026 /* ScoreView.m */; };
+		8BE12B980E5229F600B5B026 /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE12B970E5229F600B5B026 /* ScoreViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +63,15 @@
 		289233AD0DB2D0DB0083E9F9 /* FlipsideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlipsideViewController.m; path = Classes/FlipsideViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* BrainTuner3_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrainTuner3_Prefix.pch; sourceTree = "<group>"; };
+		8B1BF0F00E466D870002E8F1 /* new icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new icon.png"; sourceTree = "<group>"; };
+		8B1BF0F10E466D870002E8F1 /* brain guy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brain guy.png"; sourceTree = "<group>"; };
+		8B1BF0F50E466FC60002E8F1 /* brain guy speech.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brain guy speech.png"; sourceTree = "<group>"; };
+		8B1BF0F70E46705F0002E8F1 /* brain tuner title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brain tuner title.png"; sourceTree = "<group>"; };
+		8B2D98210E527EF400BA7AEA /* LabelLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelLink.h; sourceTree = "<group>"; };
+		8B2D98220E527EF400BA7AEA /* LabelLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelLink.m; sourceTree = "<group>"; };
+		8B2D987B0E52849600BA7AEA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		8B2D98F80E52C8EE00BA7AEA /* tech_beep_8.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tech_beep_8.wav; sourceTree = "<group>"; };
+		8B2D9A0D0E52E6EF00BA7AEA /* beep5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = beep5.wav; path = ../beep5.wav; sourceTree = SOURCE_ROOT; };
 		8B4CF1A40E3489EF006E4610 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		8B4CF1C80E37383E006E4610 /* TECHNOLOGY MULTIMEDIA MENU SCREEN BLIP 01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "TECHNOLOGY MULTIMEDIA MENU SCREEN BLIP 01.wav"; sourceTree = "<group>"; };
 		8B4CF20A0E374011006E4610 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = /System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<absolute>"; };
@@ -63,6 +83,11 @@
 		8B8EE4200E2CC8150079EFC2 /* BrainTuner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BrainTuner.png; sourceTree = "<group>"; };
 		8B8EE4210E2CC8150079EFC2 /* MrNote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MrNote.png; sourceTree = "<group>"; };
 		8BBF0F370E2DEA6300A48FD7 /* right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right.png; sourceTree = "<group>"; };
+		8BE12B1C0E52211E00B5B026 /* ScoreView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoreView.xib; sourceTree = "<group>"; };
+		8BE12B720E5228A900B5B026 /* ScoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScoreView.m; path = Classes/ScoreView.m; sourceTree = "<group>"; };
+		8BE12B730E5228A900B5B026 /* ScoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScoreView.h; path = Classes/ScoreView.h; sourceTree = "<group>"; };
+		8BE12B960E5229F600B5B026 /* ScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreViewController.h; sourceTree = "<group>"; };
+		8BE12B970E5229F600B5B026 /* ScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreViewController.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +145,8 @@
 				289233A50DB2D0840083E9F9 /* MainView.m */,
 				289233A80DB2D0DB0083E9F9 /* MainViewController.h */,
 				289233A90DB2D0DB0083E9F9 /* MainViewController.m */,
+				8B2D98210E527EF400BA7AEA /* LabelLink.h */,
+				8B2D98220E527EF400BA7AEA /* LabelLink.m */,
 			);
 			name = "Main View";
 			sourceTree = "<group>";
@@ -129,6 +156,7 @@
 			children = (
 				289233A00DB2D0730083E9F9 /* Main View */,
 				281C6CD70DB2D82200F60ACC /* Flipside View */,
+				8BE12B1A0E5220B000B5B026 /* Score View */,
 				080E96DDFE201D6D7F000001 /* Application Controllers */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -150,6 +178,12 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8B2D9A0D0E52E6EF00BA7AEA /* beep5.wav */,
+				8B2D98F80E52C8EE00BA7AEA /* tech_beep_8.wav */,
+				8B1BF0F70E46705F0002E8F1 /* brain tuner title.png */,
+				8B1BF0F50E466FC60002E8F1 /* brain guy speech.png */,
+				8B1BF0F00E466D870002E8F1 /* new icon.png */,
+				8B1BF0F10E466D870002E8F1 /* brain guy.png */,
 				8B4CF1C80E37383E006E4610 /* TECHNOLOGY MULTIMEDIA MENU SCREEN BLIP 01.wav */,
 				8B4CF1A40E3489EF006E4610 /* icon.png */,
 				8BBF0F370E2DEA6300A48FD7 /* right.png */,
@@ -162,6 +196,7 @@
 				280E754B0DD40C5E005A515E /* MainView.xib */,
 				280E754C0DD40C5E005A515E /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
+				8B2D987B0E52849600BA7AEA /* Default.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -174,6 +209,18 @@
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8BE12B1A0E5220B000B5B026 /* Score View */ = {
+			isa = PBXGroup;
+			children = (
+				8BE12B730E5228A900B5B026 /* ScoreView.h */,
+				8BE12B720E5228A900B5B026 /* ScoreView.m */,
+				8BE12B1C0E52211E00B5B026 /* ScoreView.xib */,
+				8BE12B960E5229F600B5B026 /* ScoreViewController.h */,
+				8BE12B970E5229F600B5B026 /* ScoreViewController.m */,
+			);
+			name = "Score View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +283,14 @@
 				8BBF0F380E2DEA6300A48FD7 /* right.png in Resources */,
 				8B4CF1A50E3489EF006E4610 /* icon.png in Resources */,
 				8B4CF1C90E37383E006E4610 /* TECHNOLOGY MULTIMEDIA MENU SCREEN BLIP 01.wav in Resources */,
+				8B1BF0F20E466D870002E8F1 /* new icon.png in Resources */,
+				8B1BF0F30E466D870002E8F1 /* brain guy.png in Resources */,
+				8B1BF0F60E466FC60002E8F1 /* brain guy speech.png in Resources */,
+				8B1BF0F80E46705F0002E8F1 /* brain tuner title.png in Resources */,
+				8BE12B1D0E52211E00B5B026 /* ScoreView.xib in Resources */,
+				8B2D987C0E52849600BA7AEA /* Default.png in Resources */,
+				8B2D98F90E52C8EE00BA7AEA /* tech_beep_8.wav in Resources */,
+				8B2D9A0E0E52E6EF00BA7AEA /* beep5.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +309,9 @@
 				289233AF0DB2D0DB0083E9F9 /* RootViewController.m in Sources */,
 				8B8EDFFB0E2B46610079EFC2 /* Problem.m in Sources */,
 				8BBF0E700E2DB9EB00A48FD7 /* FlipsideViewController.m in Sources */,
+				8BE12B740E5228A900B5B026 /* ScoreView.m in Sources */,
+				8BE12B980E5229F600B5B026 /* ScoreViewController.m in Sources */,
+				8B2D98230E527EF400BA7AEA /* LabelLink.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +343,32 @@
 				PRODUCT_NAME = BrainTuner3;
 			};
 			name = Release;
+		};
+		8BA3125D0E47E5F5003A23A5 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Bridger Maxwell";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5826F588-07F2-43D2-B575-89C2808E0871";
+				SDKROOT = iphoneos2.0;
+			};
+			name = Distribution;
+		};
+		8BA3125E0E47E5F5003A23A5 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = BrainTuner3_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = BrainTuner3;
+			};
+			name = Distribution;
 		};
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -321,6 +405,7 @@
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
 				1D6058950D05DD3E006BFB54 /* Release */,
+				8BA3125E0E47E5F5003A23A5 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -330,6 +415,7 @@
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
 				C01FCF5008A954540054247B /* Release */,
+				8BA3125D0E47E5F5003A23A5 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

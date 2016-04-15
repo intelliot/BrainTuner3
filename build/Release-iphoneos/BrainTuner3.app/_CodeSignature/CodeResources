@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>files</key>
+	<dict>
+		<key>BrainTuner.png</key>
+		<data>
+		vWAMJMSdkPoGc0CWK+HNGvSf36g=
+		</data>
+		<key>DeclineAnswer.png</key>
+		<data>
+		3oYTul17HJwDXZMJpNELbija8vg=
+		</data>
+		<key>Default.png</key>
+		<data>
+		Fu25HzDC8ija2P6nWbUfVPHwI94=
+		</data>
+		<key>FlipsideView.nib</key>
+		<data>
+		Qap5qFHaCvaIMNJFjitHYOIhh2A=
+		</data>
+		<key>MainView.nib</key>
+		<data>
+		ThsbOddWsalRt4efSQU4HM2KUTc=
+		</data>
+		<key>MainWindow.nib</key>
+		<data>
+		Q1wE3ffBqcZ6EFjOBq9lzlUY5bw=
+		</data>
+		<key>MrNote.png</key>
+		<data>
+		9k7Ms9feUnCP5BK9WNkSLPRgt5o=
+		</data>
+		<key>PkgInfo</key>
+		<data>
+		n57qDP4tZfLD1rCS43W0B4LQjzE=
+		</data>
+		<key>ScoreView.nib</key>
+		<data>
+		rYJYkKZv7dPFLK0K9jw0LhV/f/c=
+		</data>
+		<key>TECHNOLOGY MULTIMEDIA MENU SCREEN BLIP 01.wav</key>
+		<data>
+		KA8U21akmIpmcVEvBePMZh/T/W0=
+		</data>
+		<key>brain guy speech.png</key>
+		<data>
+		RJzNbLUGps6g74QlTIentXrhVTs=
+		</data>
+		<key>brain guy.png</key>
+		<data>
+		dNrxVvziHTqLx0j7k61mdV5GBp4=
+		</data>
+		<key>brain tuner title.png</key>
+		<data>
+		K6xU+Cq5Z4nqM/86i6YpJntLfoA=
+		</data>
+		<key>embedded.mobileprovision</key>
+		<data>
+		B2B/iLNmvVcQLxaUZDNCVFGuRLA=
+		</data>
+		<key>icon.png</key>
+		<data>
+		DwEq/1rW4jUN2hYiOia0RfPO66k=
+		</data>
+		<key>new icon.png</key>
+		<data>
+		fD1BbSO+zwMCqp/PxTLrHF061CU=
+		</data>
+		<key>right.png</key>
+		<data>
+		KpJlsV7Kr0fm4v8uxShiuZ8mFxU=
+		</data>
+		<key>right3.png</key>
+		<data>
+		yOn5i8psAWmeAeSkpqjUi3YaupQ=
+		</data>
+		<key>wrong.png</key>
+		<data>
+		lJ4bs+2GHDF3gpepOUqyKrDS7UM=
+		</data>
+	</dict>
+	<key>rules</key>
+	<dict>
+		<key>.*</key>
+		<true/>
+		<key>Info.plist</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>10</real>
+		</dict>
+		<key>ResourceRules.plist</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>100</real>
+		</dict>
+	</dict>
+</dict>
+</plist>

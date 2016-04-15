@@ -20,8 +20,7 @@
 
 @property (nonatomic, retain) UIWindow *window;
 @property (nonatomic, retain) RootViewController *rootViewController;
-@property (nonatomic) int 
-problemCount;
+@property (nonatomic) int problemCount;
 
 @end
 

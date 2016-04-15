@@ -48,15 +48,18 @@
 		}
 		instance.isRight = NO;
 	}
-		
+	
+	//instance.minimal
+	
 	instance.text = [NSString stringWithFormat:@"%d %@ %d = %d", a, strOp, b, c];
 	//instance.isRight = YES;
-	NSLog(@"%d and %d", a, b);
+	//NSLog(@"%d and %d", a, b);
 	return instance;
 }
 
 - (NSString *)description {
-	return [NSString stringWithFormat: @"%@ %@", text, [NSNumber numberWithBool:isRight]];
+	//return [NSString stringWithFormat: @"%@ %@", text, [NSNumber numberWithBool:isRight]];
+	return [text stringByReplacingOccurrencesOfString:@" " withString:@""];
 }
 
 @end

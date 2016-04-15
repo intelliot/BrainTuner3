@@ -1,0 +1,4 @@
+/Users/elliot/Desktop/BrainTuner3/MyTableViewCell.m:41: warning: incomplete implementation of class 'MyTableViewCell'
+/Users/elliot/Desktop/BrainTuner3/MyTableViewCell.m:41: warning: method definition for '-setImage:' not found
+/Users/elliot/Desktop/BrainTuner3/MyTableViewCell.m:41: warning: method definition for '-setFont:' not found
+/Users/elliot/Desktop/BrainTuner3/MyTableViewCell.m:41: warning: method definition for '-setText:' not found

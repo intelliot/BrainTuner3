@@ -9,6 +9,7 @@
 #import "RootViewController.h"
 #import "MainViewController.h"
 #import "FlipsideViewController.h"
+#import "ScoreViewController.h"
 
 //#import "AudioServices.h"
 #include <AudioToolbox/AudioToolbox.h>
@@ -23,6 +24,7 @@
 @synthesize mainViewController;
 @synthesize flipsideViewController;
 
+@synthesize scoreViewController;
 
 - (void)viewDidLoad {
 	
@@ -59,6 +61,13 @@
 }
 
 
+- (void)loadScoreViewController {
+	ScoreViewController *viewController = [[ScoreViewController alloc] initWithNibName:@"ScoreView" bundle:nil];
+	self.scoreViewController = viewController;
+	[viewController release];
+}
+
+
 - (void)playSound:(const char *)inFileName {
 	SystemSoundID mySSID; // maybe reuse this?
 	
@@ -75,23 +84,32 @@
 
 - (IBAction)toggleView {	
 	/*
-	 This method is called when the info or Done button is pressed.
+	 This method is called when the Start Game, Done, or OK is pressed.
 	 It flips the displayed view from the main view to the flipside view and vice-versa.
 	 */
 	
-	[self playSound:"TECHNOLOGY MULTIMEDIA MENU SCREEN BLIP 01"];
+	//[self playSound:"TECHNOLOGY MULTIMEDIA MENU SCREEN BLIP 01"];
 	
+	// if the flipsideViewController isn't loaded
 	if (flipsideViewController == nil) {
 		[self loadFlipsideViewController];
 	}
 	
+	// get a pointer to the 2 views we're working with
 	UIView *mainView = mainViewController.view;
 	UIView *flipsideView = flipsideViewController.view;
+
+	UIView *scoreView;
+	if (scoreViewController != nil) {
+		scoreView = scoreViewController.view;
+	}
 	
+	// start animating (be sure to commitAnimations later!)
 	[UIView beginAnimations:nil context:NULL];
 	[UIView setAnimationDuration:1];
 	[UIView setAnimationTransition:([mainView superview] ? UIViewAnimationTransitionFlipFromRight : UIViewAnimationTransitionFlipFromLeft) forView:self.view cache:YES];
 	
+	// on mainView
 	if ([mainView superview] != nil) {
 		[flipsideViewController viewWillAppear:YES];
 		[mainViewController viewWillDisappear:YES];
@@ -102,25 +120,77 @@
 		
 		[self.view addSubview:flipsideView];
 		[self.view insertSubview:flipsideNavigationBar aboveSubview:flipsideView];
+		
+		[UIView commitAnimations];
+		
 		[mainViewController viewDidDisappear:YES];
 		[flipsideViewController viewDidAppear:YES];
 
+	//  on flipsideView
+	//} else if([flipsideView superview] != nil) {
+
+	// on flipsideView or scoreView
 	} else {
 		[mainViewController viewWillAppear:YES];
-		[flipsideViewController viewWillDisappear:YES];
-		[flipsideView removeFromSuperview];
-		[flipsideNavigationBar removeFromSuperview];
+		
+		// switching from flipsideView
+		if ([flipsideView superview] != nil) {
+			[flipsideViewController viewWillDisappear:YES];
+			[flipsideView removeFromSuperview];
+			[flipsideNavigationBar removeFromSuperview];
+		
+		// switching from scoreView
+		} else {
+			[scoreViewController viewWillDisappear:YES];
+			[scoreView removeFromSuperview];		
+		}
+		
 		[self.view addSubview:mainView];
 		
 		// Start button
 		[self.view insertSubview:startButton aboveSubview:mainViewController.view];
 		
-		[flipsideViewController viewDidDisappear:YES];
+		[UIView commitAnimations];
+		
+		if ([flipsideView superview] != nil) {
+			[flipsideViewController viewDidDisappear:YES];
+		} else {
+			[scoreViewController viewDidDisappear:YES];
+		}
+		
 		[mainViewController viewDidAppear:YES];
 	}
-	[UIView commitAnimations];
+	
 }
 
+
+- (IBAction)showScoreView:(double)score {
+	
+	if (scoreViewController == nil) {
+		[self loadScoreViewController];
+	}
+	
+	UIView *mainView = mainViewController.view;
+	UIView *flipsideView = flipsideViewController.view;
+	UIView *scoreView = scoreViewController.view;
+	
+	[UIView beginAnimations:nil context:NULL];
+	[UIView setAnimationDuration:1];
+	[UIView setAnimationTransition:([mainView superview] ? UIViewAnimationTransitionFlipFromRight : UIViewAnimationTransitionFlipFromLeft) forView:self.view cache:YES];
+	
+	[scoreViewController setFinalTime:score];
+	[scoreViewController viewWillAppear:YES];
+	[flipsideViewController viewWillDisappear:YES];
+	[flipsideView removeFromSuperview];
+	[flipsideNavigationBar removeFromSuperview];
+	
+	[self.view addSubview:scoreView];
+	[flipsideViewController viewDidDisappear:YES];
+	[scoreViewController viewDidAppear:YES];
+	
+	// this is important
+	[UIView commitAnimations];
+}
 
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

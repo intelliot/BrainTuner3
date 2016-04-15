@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface FlipsideViewController : UIViewController {
+	IBOutlet UILabel *countdown;
+	
 	IBOutlet UITableView *problemTable;
 	IBOutlet UIButton *rightButton;
 	IBOutlet UIButton *wrongButton;
@@ -18,6 +20,8 @@
 	//	BrainTuner3AppDelegate *app = (BrainTuner3AppDelegate *)[[UIApplication sharedApplication] delegate];
 	int problemCount;
 	NSDate *start;
+	
+	double finalTime;
 }
 
 //- (UITableViewCell *)cellFromNibNamed:(NSString *)nibName;
@@ -28,6 +32,9 @@
 - (void)alertStatsAndReset;
 - (void)setProblemCount:(int)newCount;
 
+- (void)playSound:(const char *)inFileName;
+
 @property (nonatomic) int problemCount;
+@property (nonatomic, retain) NSMutableArray *problemArray;
 
 @end

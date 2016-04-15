@@ -15,11 +15,15 @@
 	NSString *text;
 	BOOL isRight;
 	UIImage *image;
+	
+	//NSString *minimal;
 }
 
 @property (nonatomic, retain) NSString *text;
 @property (nonatomic) BOOL isRight;
 @property (nonatomic, retain) UIImage *image;
+
+//@property (nonatomic, retain) NSString *minimal;
 
 + (id)randomProblem;
 

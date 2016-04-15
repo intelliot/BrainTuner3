@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'BrainTuner3' target in the 'BrainTuner3' project
+//
+
+#ifdef __OBJC__
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#endif
